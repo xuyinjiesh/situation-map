@@ -1,0 +1,328 @@
+[
+  {
+    "id": "evt-red-sea-reroute",
+    "title": "红海绕行常态化，亚丁湾战争险费率居高",
+    "date": "2026-09-18",
+    "category": "energy",
+    "actors": ["gbr", "usa", "egy", "sau", "irn"],
+    "places": [
+      { "name": "亚丁湾", "lat": 12.8, "lon": 45.0, "role": "site" },
+      { "name": "苏伊士运河", "lat": 30.02, "lon": 32.58, "role": "target" },
+      { "name": "好望角", "lat": -34.36, "lon": 18.47, "role": "target" }
+    ],
+    "summary": "护航联盟的兵力投入维持在高位，但商船队对亚丁湾的风险定价并未回落：战争险附加费与船员津贴推动部分班轮公司把绕行好望角从应急安排转为年度排班。结果是亚欧航线的有效运距被永久性拉长约两周，运费与碳排放同时抬升，埃及的运河收入与苏伊士型油轮的租金一起被重新定价。",
+    "severity": 4,
+    "emblem": "一条被拉长的血管：血还是那些血，路却绕得更远。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "航运保险与班轮排班公告（待接入）" }],
+    "tags": ["航运", "保险", "能源通道"]
+  },
+  {
+    "id": "evt-taiwan-strait-patrol",
+    "title": "台海周边联合战备警巡与反制演训",
+    "date": "2026-09-02",
+    "category": "conflict",
+    "actors": ["chn", "usa", "jpn"],
+    "places": [
+      { "name": "台湾海峡", "lat": 24.5, "lon": 119.5, "role": "site" },
+      { "name": "巴士海峡", "lat": 21.4, "lon": 121.0, "role": "target" },
+      { "name": "横须贺", "lat": 35.28, "lon": 139.67, "role": "origin" }
+    ],
+    "summary": "演训的科目从单纯绕岛转向通道封控与外线拒止，海空兵力的活动重心逐步移向第一岛链外侧。对市场而言更关键的不是单次演训的规模，而是它已成例行节奏——保险费率、航路备选与芯片供应链的库存策略，都在按「随时可能中断数周」的假设重新标定。",
+    "severity": 4,
+    "emblem": "岛链上绷紧的弦，绷久了就成了乐器。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "区域军事活动通报（待接入）" }],
+    "tags": ["第一岛链", "半导体", "航运"]
+  },
+  {
+    "id": "evt-south-china-sea-shoal",
+    "title": "南海岛礁补给对峙与灰色地带摩擦",
+    "date": "2026-08-21",
+    "category": "conflict",
+    "actors": ["chn", "phl", "usa"],
+    "places": [
+      { "name": "仁爱礁", "lat": 9.75, "lon": 115.85, "role": "site" },
+      { "name": "马尼拉", "lat": 14.6, "lon": 120.98, "role": "origin" },
+      { "name": "巴拉望", "lat": 9.5, "lon": 118.5, "role": "target" }
+    ],
+    "summary": "水炮、碰撞与补给拦截构成了一种低强度但高频次的消耗模式。菲律宾把同盟条款当作对冲工具，美国则把轮换部署与联合巡航变成既成事实；双方都在避免开火，却都在把对方的克制上限往下压。真正的赌注在渔业与油气区块，而不在礁盘本身。",
+    "severity": 3,
+    "emblem": "两只手按住同一块礁石，谁先松手谁就输了面子。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "海上执法通报（待接入）" }],
+    "tags": ["灰色地带", "同盟", "渔业"]
+  },
+  {
+    "id": "evt-ukraine-deep-strike",
+    "title": "远程打击纵深扩大，能源与港口设施交替受袭",
+    "date": "2026-07-30",
+    "category": "conflict",
+    "actors": ["rus", "ukr", "eu", "usa"],
+    "places": [
+      { "name": "基辅", "lat": 50.45, "lon": 30.52, "role": "site" },
+      { "name": "别尔哥罗德", "lat": 50.6, "lon": 36.6, "role": "target" },
+      { "name": "新罗西斯克", "lat": 44.72, "lon": 37.77, "role": "target" }
+    ],
+    "summary": "无人机与巡航导弹把战线从前沿推到了炼油厂、变电站和粮食码头。这种互相放血的均衡不产生决定性突破，却持续抬高全球柴油与谷物的风险溢价，也让黑海航运的保险条款成了比战线更灵敏的晴雨表。",
+    "severity": 4,
+    "emblem": "战线没有动，但两国的后方都在着火。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "战况与航运通报（待接入）" }],
+    "tags": ["黑海", "粮食", "炼油"]
+  },
+  {
+    "id": "evt-gaza-ceasefire-talks",
+    "title": "加沙停火与战后安排的间接谈判",
+    "date": "2026-08-09",
+    "category": "diplomacy",
+    "actors": ["isr", "qat", "egy", "usa"],
+    "places": [
+      { "name": "加沙", "lat": 31.5, "lon": 34.47, "role": "site" },
+      { "name": "多哈", "lat": 25.29, "lon": 51.53, "role": "origin" },
+      { "name": "开罗", "lat": 30.04, "lon": 31.24, "role": "origin" }
+    ],
+    "summary": "谈判的结构性问题在于：停火容易，治理难。谁出钱重建、谁提供安全、谁来承认，三件事缺一件就会回到原状。斡旋方的信用因此成了稀缺资源，而地区国家正把重建资金当作重塑秩序影响力的入场券。",
+    "severity": 4,
+    "emblem": "停火是标点，不是句号。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "斡旋方声明（待接入）" }],
+    "tags": ["斡旋", "重建", "地区秩序"]
+  },
+  {
+    "id": "evt-sahel-bloc-withdrawal",
+    "title": "萨赫勒三国联盟推进，外部驻军加速退出",
+    "date": "2026-06-15",
+    "category": "diplomacy",
+    "actors": ["mli", "ner", "bfa", "fra", "rus"],
+    "places": [
+      { "name": "巴马科", "lat": 12.64, "lon": -8.0, "role": "origin" },
+      { "name": "尼亚美", "lat": 13.51, "lon": 2.11, "role": "origin" },
+      { "name": "瓦加杜古", "lat": 12.37, "lon": -1.52, "role": "origin" }
+    ],
+    "summary": "三国以主权叙事替代反恐合作框架，同时引入新的安全承包商与矿产合作方。西方撤出留下的不是真空而是价目表：铀、金与过境权都可以重新谈。代价是边境地带的武装组织获得了更长的活动半径。",
+    "severity": 3,
+    "emblem": "把旧房东赶走，新房东已经在门口等着。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "区域安全通报（待接入）" }],
+    "tags": ["主权叙事", "铀矿", "反恐"]
+  },
+  {
+    "id": "evt-sudan-civil-war",
+    "title": "苏丹内战延续，达尔富尔人道通道受阻",
+    "date": "2026-07-04",
+    "category": "conflict",
+    "actors": ["sdn", "are", "egy"],
+    "places": [
+      { "name": "喀土穆", "lat": 15.5, "lon": 32.5, "role": "site" },
+      { "name": "法希尔", "lat": 13.63, "lon": 25.35, "role": "site" },
+      { "name": "苏丹港", "lat": 19.62, "lon": 37.22, "role": "target" }
+    ],
+    "summary": "两支武装在首都与西部之间反复拉锯，外部资金与无人机让战事无法自行耗尽。红海西岸因此多了一个长期的不稳定源：难民流向埃及与乍得，而港口与矿区的控制权成为各方背后的金主真正关心的事。",
+    "severity": 5,
+    "emblem": "地图上的一片空地，现实中的一场饥荒。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "人道机构通报（待接入）" }],
+    "tags": ["人道危机", "红海", "代理人"]
+  },
+  {
+    "id": "evt-chip-controls-tighten",
+    "title": "先进制程设备与算力出口管制再收紧",
+    "date": "2026-09-25",
+    "category": "tech",
+    "actors": ["usa", "chn", "jpn", "eu", "kor"],
+    "places": [
+      { "name": "华盛顿", "lat": 38.9, "lon": -77.04, "role": "origin" },
+      { "name": "埃因霍温", "lat": 51.44, "lon": 5.47, "role": "site" },
+      { "name": "东京", "lat": 35.68, "lon": 139.69, "role": "site" },
+      { "name": "台北", "lat": 25.03, "lon": 121.56, "role": "target" }
+    ],
+    "summary": "管制清单从单点设备扩展到整条工艺链与配套服务，甚至涵盖备件与工程师签证。效果是双向的：对手的先进产能被推迟，盟友企业的收入也被削去一块。真正的博弈点在于谁来定义「先进」这条线，而这条线每年都在移动。",
+    "severity": 3,
+    "emblem": "在硅片上画国界。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "出口管制公告（待接入）" }],
+    "tags": ["出口管制", "算力", "供应链"]
+  },
+  {
+    "id": "evt-rare-earth-licensing",
+    "title": "关键矿产出口许可制与价格波动",
+    "date": "2026-08-02",
+    "category": "energy",
+    "actors": ["chn", "usa", "eu", "jpn"],
+    "places": [
+      { "name": "包头", "lat": 40.66, "lon": 109.84, "role": "origin" },
+      { "name": "布鲁塞尔", "lat": 50.85, "lon": 4.35, "role": "site" },
+      { "name": "名古屋", "lat": 35.18, "lon": 136.91, "role": "target" }
+    ],
+    "summary": "许可制把出口从商业行为变成行政裁量，价格随之带上了政策溢价。下游厂商的对策不是找到替代矿源——那需要十年——而是加快回收、替代配方与库存前置。这场博弈的时间尺度错配，正是它危险的地方。",
+    "severity": 3,
+    "emblem": "矿在山里，筹码在桌上。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "贸易许可公告（待接入）" }],
+    "tags": ["稀土", "许可制", "库存策略"]
+  },
+  {
+    "id": "evt-fed-cut-em-flows",
+    "title": "降息周期开启，新兴市场资本流向分化",
+    "date": "2026-09-17",
+    "category": "economy",
+    "actors": ["usa", "bra", "ind", "tur"],
+    "places": [
+      { "name": "华盛顿", "lat": 38.9, "lon": -77.04, "role": "origin" },
+      { "name": "圣保罗", "lat": -23.55, "lon": -46.63, "role": "target" },
+      { "name": "孟买", "lat": 19.08, "lon": 72.88, "role": "target" },
+      { "name": "伊斯坦布尔", "lat": 41.01, "lon": 28.98, "role": "target" }
+    ],
+    "summary": "宽松并不均匀地惠及所有人：有财政空间和本币债市场的国家吸走了大部分流入，而经常账户脆弱的经济体只得到了短暂喘息。利差交易重新活跃，随之而来的是本币升值对出口的挤压——这是一轮典型的、分层的宽松。",
+    "severity": 2,
+    "emblem": "潮水回来了，但只灌满了几个池子。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "国际收支与资金流数据（待接入）" }],
+    "tags": ["货币政策", "资本流动", "汇率"]
+  },
+  {
+    "id": "evt-sovereign-debt-restructuring",
+    "title": "主权债务重组推进，债权人协调仍是瓶颈",
+    "date": "2026-05-28",
+    "category": "economy",
+    "actors": ["lka", "zmb", "gha", "chn", "usa"],
+    "places": [
+      { "name": "科伦坡", "lat": 6.93, "lon": 79.85, "role": "site" },
+      { "name": "卢萨卡", "lat": -15.39, "lon": 28.32, "role": "site" },
+      { "name": "阿克拉", "lat": 5.6, "lon": -0.19, "role": "site" }
+    ],
+    "summary": "重组的难点已经从「减多少」变成「谁先减」。多边机构、商业债权人与双边债权人各自要求对方先承担损失，导致谈判周期远超预期。结果是这些国家在等待中丧失了数年增长——债务问题的真实成本是时间。",
+    "severity": 2,
+    "emblem": "大家都在等别人先割肉。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "重组谈判进展（待接入）" }],
+    "tags": ["债务重组", "债权人协调", "发展融资"]
+  },
+  {
+    "id": "evt-dprk-russia-cooperation",
+    "title": "朝俄军事与技术合作深化",
+    "date": "2026-06-27",
+    "category": "conflict",
+    "actors": ["prk", "rus", "kor", "usa"],
+    "places": [
+      { "name": "平壤", "lat": 39.03, "lon": 125.75, "role": "origin" },
+      { "name": "符拉迪沃斯托克", "lat": 43.12, "lon": 131.89, "role": "site" },
+      { "name": "元山", "lat": 39.15, "lon": 127.44, "role": "target" }
+    ],
+    "summary": "弹药、人力与卫星技术在这个组合里互为货币。对朝鲜而言这是突破制裁的稀缺窗口，对俄罗斯而言这是可持续的消耗品补给线。东北亚的军备节奏因此被拉快，日韩的防务预算与美日韩的情报共享随之升级。",
+    "severity": 3,
+    "emblem": "两个被制裁者，凑出了一条补给线。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "情报评估通报（待接入）" }],
+    "tags": ["制裁", "军备", "东北亚"]
+  },
+  {
+    "id": "evt-arctic-route-season",
+    "title": "北极航道通航窗口延长，破冰护航需求上升",
+    "date": "2026-09-08",
+    "category": "climate",
+    "actors": ["rus", "chn", "nor"],
+    "places": [
+      { "name": "摩尔曼斯克", "lat": 68.97, "lon": 33.08, "role": "origin" },
+      { "name": "白令海峡", "lat": 65.75, "lon": -168.95, "role": "site" },
+      { "name": "上海", "lat": 31.23, "lon": 121.47, "role": "target" }
+    ],
+    "summary": "航期从两个月向四个月缓慢扩张，把亚欧航程缩短了三分之一，但代价是极不稳定的冰情、稀缺的救援能力与高昂的保险条件。真正被改变的还不止航运：沿线的港口、雷达与资源开采权正在被系统性布局。",
+    "severity": 2,
+    "emblem": "冰化开的地方，最先浮上来的是航线。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "航道通航与冰情通报（待接入）" }],
+    "tags": ["北极", "航道", "基础设施"]
+  },
+  {
+    "id": "evt-panama-canal-draft",
+    "title": "巴拿马运河限航，干散货改道苏伊士与陆桥",
+    "date": "2026-04-20",
+    "category": "climate",
+    "actors": ["pan", "usa", "chn"],
+    "places": [
+      { "name": "加通湖", "lat": 9.12, "lon": -79.79, "role": "site" },
+      { "name": "巴拿马运河", "lat": 9.08, "lon": -79.68, "role": "site" },
+      { "name": "上海", "lat": 31.23, "lon": 121.47, "role": "origin" }
+    ],
+    "summary": "淡水短缺把一条百年航道变成了配额制设施。过闸名额的拍卖价格一度高过运费本身，美国东海岸的能源出口与亚洲的消费品进口同时被迫改道。这提醒所有人：气候风险在物流上的传导路径，比在气温曲线上要陡峭得多。",
+    "severity": 3,
+    "emblem": "一条河的水位，牵着两个大洋的价签。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "运河管理局通航公告（待接入）" }],
+    "tags": ["气候风险", "物流", "水"]
+  },
+  {
+    "id": "evt-essequibo-dispute",
+    "title": "埃塞奎博争端与海上油田权益对峙",
+    "date": "2026-07-19",
+    "category": "conflict",
+    "actors": ["ven", "guy", "bra"],
+    "places": [
+      { "name": "乔治敦", "lat": 6.8, "lon": -58.16, "role": "origin" },
+      { "name": "加拉加斯", "lat": 10.48, "lon": -66.9, "role": "origin" },
+      { "name": "埃塞奎博", "lat": 6.3, "lon": -59.5, "role": "site" }
+    ],
+    "summary": "争议区外海是近年全球增量最大的油田之一，这让一桩陈年领土主张突然有了现金流。委内瑞拉需要外部议题凝聚内部，圭亚那需要外部保障守住油田，而域外石油公司的合同把两者的对峙国际化。",
+    "severity": 3,
+    "emblem": "老地图上的旧线条，新油田上的新军舰。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "区域外交声明（待接入）" }],
+    "tags": ["领土争端", "石油", "拉美"]
+  },
+  {
+    "id": "evt-ai-datacenter-power",
+    "title": "算力扩张撞上电网容量与水资源约束",
+    "date": "2026-08-27",
+    "category": "tech",
+    "actors": ["usa", "eu"],
+    "places": [
+      { "name": "弗吉尼亚北部", "lat": 39.04, "lon": -77.49, "role": "site" },
+      { "name": "都柏林", "lat": 53.35, "lon": -6.26, "role": "site" },
+      { "name": "亚利桑那", "lat": 33.45, "lon": -112.07, "role": "site" }
+    ],
+    "summary": "瓶颈从芯片转向了电和冷却水。并网排队年限与电价成为数据中心选址的第一约束，居民对电费与水库水位的反弹开始形成实际的审批阻力。算力竞争因此从企业间竞争，变成企业与地方社会之间的谈判。",
+    "severity": 2,
+    "emblem": "服务器不缺水，缺的是一整个县的同意。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "电网并网与市政听证（待接入）" }],
+    "tags": ["算力", "电力", "水"]
+  },
+  {
+    "id": "evt-mediterranean-migration",
+    "title": "地中海与美墨边境移民压力同步上行",
+    "date": "2026-06-08",
+    "category": "society",
+    "actors": ["eu", "ita", "mex", "usa"],
+    "places": [
+      { "name": "兰佩杜萨", "lat": 35.5, "lon": 12.6, "role": "site" },
+      { "name": "的黎波里", "lat": 32.89, "lon": 13.19, "role": "origin" },
+      { "name": "华雷斯", "lat": 31.69, "lon": -106.42, "role": "site" }
+    ],
+    "summary": "推力的来源越来越硬：萨赫勒的冲突、非洲之角的干旱、拉美的经济停滞。接收国的应对则越来越软：外包给第三国、临时许可与边境执法。结果是移民路线变得更长、更贵、更危险，而政治收益立刻兑现。",
+    "severity": 3,
+    "emblem": "人往哪里走，不取决于墙，取决于雨。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "边境与救援统计（待接入）" }],
+    "tags": ["移民", "人口", "边境"]
+  },
+  {
+    "id": "evt-critical-minerals-lithium",
+    "title": "锂价低位震荡，资源国推进本地加工要求",
+    "date": "2026-05-12",
+    "category": "energy",
+    "actors": ["chl", "arg", "cod", "chn"],
+    "places": [
+      { "name": "阿塔卡马盐湖", "lat": -23.5, "lon": -68.3, "role": "site" },
+      { "name": "科卢韦齐", "lat": -10.71, "lon": 25.47, "role": "site" },
+      { "name": "宁德", "lat": 26.66, "lon": 119.55, "role": "target" }
+    ],
+    "summary": "价格下行并没有削弱资源国的议价意愿，反而让它们更倾向于用出口配额与本地加工要求换取产业落地。中游企业因此面临一个两难：把产能搬到矿区会牺牲效率，不搬则可能失去配额。",
+    "severity": 2,
+    "emblem": "矿在地下，工厂要搬到家门口。",
+    "confidence": "illustrative",
+    "sources": [{ "label": "矿业与贸易政策（待接入）" }],
+    "tags": ["锂", "钴", "产业政策"]
+  }
+]

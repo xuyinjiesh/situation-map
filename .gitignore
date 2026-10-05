@@ -1,0 +1,17 @@
+# 依赖与构建产物
+node_modules/
+dist/
+*.tsbuildinfo
+
+# 本地工作目录（沙箱环境里 npm 缓存必须落在工作区内）
+.npm-cache/
+.browsers/
+
+# 数据闸门的备份
+src/data/*.bak
+
+# 编辑器与系统
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

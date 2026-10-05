@@ -1,0 +1,271 @@
+[
+  {
+    "id": "trend-convoy-normalization",
+    "title": "护航常态化：海上安全从公共服务转向订阅制",
+    "since": "2024",
+    "horizon": "1y",
+    "direction": "rising",
+    "confidence": 0.65,
+    "actors": ["usa", "gbr", "egy", "sau", "irn"],
+    "corridor": [
+      { "name": "亚丁湾", "lat": 12.8, "lon": 45.0, "role": "site" },
+      { "name": "吉布提", "lat": 11.59, "lon": 43.15, "role": "site" },
+      { "name": "苏伊士运河", "lat": 30.02, "lon": 32.58, "role": "target" }
+    ],
+    "drivers": [
+      "护航联盟的兵力轮换难以长期维持",
+      "船东转向私营武装护卫与战争险市场",
+      "沿岸国把过境安全当作可交易的资源"
+    ],
+    "indicators": [
+      { "label": "绕行好望角的集装箱运力占比", "value": "高位", "change": "缓慢回落" },
+      { "label": "战争险附加费", "value": "远高于危机前", "change": "震荡" },
+      { "label": "随船武装护卫合同量", "value": "显著增长", "change": "上行" }
+    ],
+    "summary": "当一条通道的安全不能由公共力量稳定供给时，它就会变成一份按航次计价的合同。短期看这是理性的分散风险，长期看它把全球航运的成本结构永久性地抬高了一档，并把安全责任从国家转移到保险公司与私营护卫公司。",
+    "counterforce": "如果地区冲突降温，联盟护航的政治意愿会最先消失，届时费率回落的速度可能快于预期。"
+  },
+  {
+    "id": "trend-compute-power-constraint",
+    "title": "算力的边界从芯片移到了电网",
+    "since": "2023",
+    "horizon": "1y",
+    "direction": "rising",
+    "confidence": 0.75,
+    "actors": ["usa", "eu", "ind"],
+    "corridor": [
+      { "name": "弗吉尼亚北部", "lat": 39.04, "lon": -77.49, "role": "site" },
+      { "name": "都柏林", "lat": 53.35, "lon": -6.26, "role": "site" },
+      { "name": "孟买", "lat": 19.08, "lon": 72.88, "role": "target" }
+    ],
+    "drivers": [
+      "单机架功率密度持续攀升",
+      "并网排队周期长于数据中心建设周期",
+      "地方对电价与水资源的社会反弹"
+    ],
+    "indicators": [
+      { "label": "并网排队时长", "value": "以年计", "change": "未见改善" },
+      { "label": "数据中心占新增电力需求比重", "value": "快速上升", "change": "上行" },
+      { "label": "被市政否决的项目数", "value": "增加", "change": "上行" }
+    ],
+    "summary": "制程与算力卡不再是唯一的稀缺项。这一轮扩张真正的瓶颈是变电站、输电走廊与冷却水，而这些都需要地方社会的同意。AI 竞赛因此第一次变成了一个需要与县政府和居民谈判的产业。",
+    "counterforce": "液冷、模型效率提升与自备电源可以在两三年内显著松动电力约束，把瓶颈重新推回芯片侧。"
+  },
+  {
+    "id": "trend-friend-shoring",
+    "title": "友岸外包：产业链沿「可信任边界」重排",
+    "since": "2018",
+    "horizon": "3y",
+    "direction": "rising",
+    "confidence": 0.8,
+    "actors": ["usa", "chn", "mex", "ind", "eu"],
+    "corridor": [
+      { "name": "深圳", "lat": 22.54, "lon": 114.06, "role": "origin" },
+      { "name": "海防", "lat": 20.86, "lon": 106.68, "role": "site" },
+      { "name": "蒙特雷", "lat": 25.69, "lon": -100.32, "role": "target" },
+      { "name": "底特律", "lat": 42.33, "lon": -83.05, "role": "target" }
+    ],
+    "drivers": [
+      "关税与出口管制的持续加码",
+      "跨国企业对「单一来源」风险的重新定价",
+      "墨西哥、越南、印度的承接产能与自贸安排"
+    ],
+    "indicators": [
+      { "label": "墨西哥占美国进口份额", "value": "约 16%", "change": "持续上行" },
+      { "label": "越南制造业 FDI", "value": "高位平台期", "change": "增速回落" },
+      { "label": "中国中间品出口占比", "value": "不降反升", "change": "隐性转口" }
+    ],
+    "summary": "这不是「去中国化」，而是「加一层」。产能迁移主要发生在最后组装环节，而上游中间品、设备与工艺仍高度集中。结果是贸易统计上的份额变了，实际的产业依赖只是绕了个弯——同时成本更高、库存更重。",
+    "counterforce": "迁出地的成本劣势与工程师供给不足，以及承接国自身的基础设施瓶颈，会把一部分产能再推回去。"
+  },
+  {
+    "id": "trend-arctic-competition",
+    "title": "北极：航道商业化与高纬资源的前置布局",
+    "since": "2013",
+    "horizon": "10y",
+    "direction": "rising",
+    "confidence": 0.6,
+    "actors": ["rus", "chn", "nor", "usa"],
+    "corridor": [
+      { "name": "摩尔曼斯克", "lat": 68.97, "lon": 33.08, "role": "origin" },
+      { "name": "喀拉海", "lat": 74.0, "lon": 70.0, "role": "site" },
+      { "name": "白令海峡", "lat": 65.75, "lon": -168.95, "role": "site" },
+      { "name": "上海", "lat": 31.23, "lon": 121.47, "role": "target" }
+    ],
+    "drivers": [
+      "海冰面积长期下降，通航窗口延长",
+      "亚欧航程可缩短约三分之一",
+      "沿线液化天然气与矿产项目的开采权争夺"
+    ],
+    "indicators": [
+      { "label": "北极航道年货运量", "value": "数千万吨级", "change": "波动上行" },
+      { "label": "通航窗口", "value": "约三至四个月", "change": "缓慢延长" },
+      { "label": "破冰护航与救援能力", "value": "严重不足", "change": "短期难改善" }
+    ],
+    "summary": "北极的变化是慢变量，但押注是快动作：港口、雷达、航道规则与保险条款正在被提前锁定。对航运业而言，真正的门槛不是距离而是可预测性——没有可靠的救援与稳定的冰情，成本优势就只是纸面上的。",
+    "counterforce": "极端冰情年份、保险市场拒保与沿岸国的航道管辖权之争，都可能让商业化进程反复中断。"
+  },
+  {
+    "id": "trend-debt-dedollar",
+    "title": "全球南方：债务重组与结算货币多元化",
+    "since": "2020",
+    "horizon": "3y",
+    "direction": "rising",
+    "confidence": 0.7,
+    "actors": ["lka", "gha", "zmb", "chn", "usa", "bra"],
+    "corridor": [
+      { "name": "科伦坡", "lat": 6.93, "lon": 79.85, "role": "origin" },
+      { "name": "阿克拉", "lat": 5.6, "lon": -0.19, "role": "site" },
+      { "name": "布宜诺斯艾利斯", "lat": -34.6, "lon": -58.38, "role": "site" },
+      { "name": "上海", "lat": 31.23, "lon": 121.47, "role": "target" }
+    ],
+    "drivers": [
+      "高利率周期留下的偿债缺口",
+      "多边与双边债权人之间的优先权之争",
+      "本币互换与本币计价贸易的扩容"
+    ],
+    "indicators": [
+      { "label": "重组平均谈判时长", "value": "以年计", "change": "未见缩短" },
+      { "label": "本币互换协议数量", "value": "持续增加", "change": "上行" },
+      { "label": "美元在全球储备占比", "value": "缓慢下降", "change": "慢变量" }
+    ],
+    "summary": "去美元化在储备层面进展缓慢，但在双边结算与融资层面已切实发生，而且主要由制裁风险而非汇率偏好驱动。真正的问题不是美元会不会被取代，而是债务重组的协调机制已经跟不上债权结构的复杂化。",
+    "counterforce": "美元的深度与流动性优势、以及债务国对资本外逃的顾虑，会长期限制替代方案的上限。"
+  },
+  {
+    "id": "trend-silicon-curtain",
+    "title": "硅幕：算力与制程的地缘分层的形成",
+    "since": "2019",
+    "horizon": "10y",
+    "direction": "rising",
+    "confidence": 0.85,
+    "actors": ["usa", "chn", "jpn", "eu", "kor"],
+    "corridor": [
+      { "name": "华盛顿", "lat": 38.9, "lon": -77.04, "role": "origin" },
+      { "name": "埃因霍温", "lat": 51.44, "lon": 5.47, "role": "site" },
+      { "name": "东京", "lat": 35.68, "lon": 139.69, "role": "site" },
+      { "name": "台北", "lat": 25.03, "lon": 121.56, "role": "site" },
+      { "name": "首尔", "lat": 37.57, "lon": 126.98, "role": "target" }
+    ],
+    "drivers": [
+      "出口管制从设备扩展到服务、备件与人才",
+      "各国产业补贴推动本地先进产能建设",
+      "AI 算力需求把芯片变成战略物资"
+    ],
+    "indicators": [
+      { "label": "先进制程产能地理集中度", "value": "极高", "change": "缓慢分散" },
+      { "label": "管制清单条目数", "value": "逐年增加", "change": "上行" },
+      { "label": "替代工艺良率差距", "value": "代际差距", "change": "收窄但未消除" }
+    ],
+    "summary": "半导体是全球化程度最高的产业，也因此最适合被当作武器。分层的代价是双倍的资本开支、割裂的标准与更高的终端价格。十年之内我们大概率会看到两套并存但互不兼容的技术栈，而不是一套胜出。",
+    "counterforce": "设备与材料环节的极端集中（少数几家企业卡住全球），让任何一方都难以彻底脱钩，只能反复豁免与加码。"
+  },
+  {
+    "id": "trend-corridor-rivalry",
+    "title": "走廊之争：印度—中东—欧洲 对 一带一路",
+    "since": "2021",
+    "horizon": "3y",
+    "direction": "volatile",
+    "confidence": 0.55,
+    "actors": ["ind", "sau", "are", "isr", "eu", "usa", "tur"],
+    "corridor": [
+      { "name": "孟买", "lat": 19.08, "lon": 72.88, "role": "origin" },
+      { "name": "迪拜", "lat": 25.2, "lon": 55.27, "role": "site" },
+      { "name": "海法", "lat": 32.79, "lon": 34.99, "role": "site" },
+      { "name": "比雷埃夫斯", "lat": 37.94, "lon": 23.64, "role": "target" }
+    ],
+    "drivers": [
+      "对单一通道（苏伊士、马六甲）风险的分散需求",
+      "海湾资本从石油出口转向物流与制造投资",
+      "港口与铁路的特许经营权竞争"
+    ],
+    "indicators": [
+      { "label": "印欧走廊已建成路段", "value": "仍以港口与备忘录为主", "change": "缓慢" },
+      { "label": "沿线港口股权变动", "value": "频繁", "change": "高度不确定" },
+      { "label": "过境时间与成本", "value": "尚未形成优势", "change": "待验证" }
+    ],
+    "summary": "走廊的可行性从不取决于地图上的直线，而取决于沿途每一个节点的政治稳定性。这条路线要穿过两个正在冲突的地区，因此它更像一个战略姿态而非物流方案——但它足以改变沿线国家的谈判筹码。",
+    "counterforce": "地区冲突、融资缺口与铁路轨距/关务的碎片化，随时可能让这条走廊停留在纸面上。"
+  },
+  {
+    "id": "trend-sahel-vacuum",
+    "title": "安全真空带：萨赫勒—红海—非洲之角",
+    "since": "2021",
+    "horizon": "3y",
+    "direction": "rising",
+    "confidence": 0.75,
+    "actors": ["mli", "ner", "bfa", "sdn", "sau", "are", "fra", "rus"],
+    "corridor": [
+      { "name": "巴马科", "lat": 12.64, "lon": -8.0, "role": "origin" },
+      { "name": "尼亚美", "lat": 13.51, "lon": 2.11, "role": "site" },
+      { "name": "喀土穆", "lat": 15.5, "lon": 32.5, "role": "site" },
+      { "name": "亚丁", "lat": 12.79, "lon": 45.03, "role": "target" }
+    ],
+    "drivers": [
+      "外部驻军撤离后留下的能力缺口",
+      "矿产与港口权益成为新的交换媒介",
+      "武装组织跨境流动的网络效应"
+    ],
+    "indicators": [
+      { "label": "萨赫勒流离失所人数", "value": "数百万级", "change": "持续上升" },
+      { "label": "外部安全承包商存在", "value": "多点分布", "change": "扩张" },
+      { "label": "红海西岸港口控制权", "value": "高度碎片化", "change": "动荡" }
+    ],
+    "summary": "撒哈拉以南的这条带状区域正在形成一个连通的低治理空间，把地中海的移民压力、红海的航运风险和非洲之角的饥荒串成一条线。任何单点干预都会被相邻节点吸收掉，这是它与其他地区冲突最根本的区别。",
+    "counterforce": "区域组织与非盟的调解、以及沿岸国家对港口收益的现实需求，仍可能维持局部秩序。"
+  },
+  {
+    "id": "trend-demographic-pressure",
+    "title": "人口拐点：老龄化的北方与膨胀的南方",
+    "since": "2010",
+    "horizon": "10y",
+    "direction": "rising",
+    "confidence": 0.9,
+    "actors": ["eu", "ita", "jpn", "kor", "mex", "usa"],
+    "corridor": [
+      { "name": "拉各斯", "lat": 6.52, "lon": 3.38, "role": "origin" },
+      { "name": "的黎波里", "lat": 32.89, "lon": 13.19, "role": "site" },
+      { "name": "兰佩杜萨", "lat": 35.5, "lon": 12.6, "role": "site" },
+      { "name": "柏林", "lat": 52.52, "lon": 13.4, "role": "target" }
+    ],
+    "drivers": [
+      "北方国家劳动年龄人口萎缩与养老支出刚性",
+      "南方国家青年人口膨胀与就业吸纳不足",
+      "气候压力叠加在人口推力之上"
+    ],
+    "indicators": [
+      { "label": "日韩总和生育率", "value": "远低于替代水平", "change": "仍在探底" },
+      { "label": "非洲青年人口增量", "value": "全球最大", "change": "持续" },
+      { "label": "接收国移民政治支持度", "value": "持续走低", "change": "恶化" }
+    ],
+    "summary": "这是所有趋势里确定性最高的一条：人口结构在三十年前就已决定。矛盾在于经济上需要移民、政治上无法接受移民，于是政策会持续在放宽与收紧之间摆动，而实际流动则通过灰色渠道完成。",
+    "counterforce": "自动化与远程协作可能降低对低技能劳动力的依赖，从而缓解部分压力——但对养老支出的刚性无能为力。"
+  },
+  {
+    "id": "trend-critical-minerals",
+    "title": "关键矿产：从价格博弈转向配额博弈",
+    "since": "2020",
+    "horizon": "10y",
+    "direction": "volatile",
+    "confidence": 0.7,
+    "actors": ["chl", "arg", "cod", "chn", "eu", "zaf"],
+    "corridor": [
+      { "name": "阿塔卡马盐湖", "lat": -23.5, "lon": -68.3, "role": "origin" },
+      { "name": "科卢韦齐", "lat": -10.71, "lon": 25.47, "role": "site" },
+      { "name": "包头", "lat": 40.66, "lon": 109.84, "role": "site" },
+      { "name": "布鲁塞尔", "lat": 50.85, "lon": 4.35, "role": "target" }
+    ],
+    "drivers": [
+      "能源转型带来的结构性需求",
+      "资源国以出口配额换本地加工",
+      "回收与替代配方降低了长期稀缺预期"
+    ],
+    "indicators": [
+      { "label": "锂价", "value": "低位大幅震荡", "change": "波动" },
+      { "label": "资源国本地加工要求", "value": "多国立法推进", "change": "上行" },
+      { "label": "关键矿产回收率", "value": "仍低", "change": "缓慢提升" }
+    ],
+    "summary": "矿产品的定价权正在从单纯的供需，转移到「谁允许出口、以什么条件出口」的行政决定上。这带来一个反直觉的结果：价格低迷时资源国的干预反而更强，因为它们要的是产业而不是现金流。",
+    "counterforce": "高价会刺激替代与回收，低价会挤出高成本产能，市场机制仍在自我修正——只是速度比政策慢。"
+  }
+]
