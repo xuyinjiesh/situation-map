@@ -7,11 +7,13 @@ dist/
 .npm-cache/
 .browsers/
 
-# 数据闸门的备份
+# 采集产物
+#
+# data/raw/snapshots/ 是"原文快照"——整套系统里唯一不可再生的资产（源站会删稿、
+# 会改标题、RSS 只保留最近 N 条）。但它每天约 1 MB，一年 400 MB，不适合进 git。
+# 生产环境应该落到对象存储或 Release 附件，本地跑就留在磁盘上。
+data/raw/snapshots/
+data/raw/auto/
+data/raw/events.auto.json
 src/data/*.bak
-
-# 编辑器与系统
-.DS_Store
-.idea/
-.vscode/*
-!.vscode/extensions.json
+.env

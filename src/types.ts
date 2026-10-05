@@ -12,6 +12,7 @@
 /** 事件门类。决定颜色与图例分组。 */
 export type Category =
   | 'conflict' // 兵：武装冲突、军事对峙
+  | 'politics' // 政：选举、组阁、公投、政变
   | 'diplomacy' // 交：外交、结盟、谈判
   | 'economy' // 财：贸易、金融、债务
   | 'energy' // 能：能源、航运、矿产
@@ -19,8 +20,17 @@ export type Category =
   | 'climate' // 候：气候、粮食、水资源
   | 'society'; // 民：人口、移民、社会动荡
 
+/**
+ * 这个数组的**成员**是门类的权威定义（闸门与采集端都从这里读）。
+ *
+ * 顺序 = **图例的展示顺序**，按语义分组（兵政交 / 财能技 / 候民），三行刚好排满。
+ * 它**不等于**采集端的判定优先级——那个在 scripts/lib/rules.mjs 的 CATEGORY_RULES 里，
+ * 顺序是"越硬越靠前"（技在能前、能在财前，所以一条"出口管制 + 贸易"的新闻归技术而非经济）。
+ * 两者刻意不同，collect.mjs 启动时只断言成员一致。
+ */
 export const CATEGORIES: readonly Category[] = [
   'conflict',
+  'politics',
   'diplomacy',
   'economy',
   'energy',

@@ -24,10 +24,15 @@
 ```bash
 npm install
 
-npm run dev        # http://127.0.0.1:5180
-npm run build      # tsc --noEmit && vite build
-npm run preview    # 预览构建产物 http://127.0.0.1:5181
-npm run pipeline   # 数据集体检报告
+npm run dev            # http://127.0.0.1:5180
+npm run build          # tsc --noEmit && vite build
+npm run preview        # 预览构建产物 http://127.0.0.1:5181
+npm run pipeline       # 数据集体检报告
+
+npm run collect:probe  # 实测各数据源的连通性
+npm run collect        # 采集一轮（默认近 48 小时），产物落在 data/raw/
+npm run collect -- --sample 12   # 顺带打印候选样本与被丢弃的"未分类"，用于调规则
+npm run countries      # 重新生成国家地名册（改完生成器后跑）
 ```
 
 环境里有几个已知的坑，脚本已经绕开：
@@ -68,7 +73,7 @@ VITE_BASE=/situation-map/ npm run build
 ```
 src/
   types.ts                 两条时间尺度的数据模型（这是全项目的宪法）
-  theme.ts                 调色板、门类元信息、inkify()
+  theme.ts                 调色板、门类元信息（标签/名称/颜色/释义）
   data/
     actors.json            37 个行为体：一个字徽记 + 印色 + 一句注释
     events.json            18 条近事
@@ -86,13 +91,19 @@ src/
     Legend.tsx  Header.tsx  DataNotice.tsx
   styles/globals.css       全部样式（羊皮纸 + 墨线 + 朱砂）
 scripts/
+  collect.mjs              采集器：抓取 → 落快照 → 规则抽取 → 多源归并
+  sources.mjs              源清单（实测过的，注释里记着实测结果）
+  lib/rules.mjs            行为体 / 门类 / 强度 的规则词典与正则编译
+  build-country-gazetteer.mjs  离线生成国家地名册（不依赖地理编码服务）
   pipeline.mjs             数据入库闸门：校验 / 补坐标 / 体检 / 写入
   screenshot.mjs           无头浏览器视觉验收
 data/
-  gazetteer.json           67 条地名→经纬度，给只有地名的新条目补坐标
-  raw/                     候选数据投放目录（管线预留）
+  gazetteer.json           85 个具体地点（城市/地区/海峡）+ 102 条英文别名，精度最高的一层
+  gazetteer.countries.json 175 国 → 代表坐标 + 中英双语名（离线生成，勿手改）
+  gazetteer.actors.json    37 个行为体→代表坐标（最后一层兜底锚点）
+  raw/                     采集产物（快照 / 自动事件 / 智库选题池）
 docs/
-  ARCHITECTURE.md          设计取舍与 Phase 2 管线蓝图
+  ARCHITECTURE.md          设计取舍、Phase 2 管线现状与实测结论
   shots/                   视觉验收截图
 ```
 

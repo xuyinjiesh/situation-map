@@ -32,7 +32,23 @@ const PATHS = {
   gazetteer: resolve(ROOT, 'data/gazetteer.json'),
 };
 
-const CATEGORIES = ['conflict', 'diplomacy', 'economy', 'energy', 'tech', 'climate', 'society'];
+// 门类表**不在这里定义**，从 src/types.ts 读——单一来源。
+//
+// 这里原本有一份手抄的副本，加"政治"门类时忘了同步，闸门立刻把 8 条 politics 事件
+// 判成"未知门类"。这类重复枚举是必然会腐烂的：app 侧、闸门侧、规则侧各有一份，
+// 改一处另两处不会报错。
+//
+// Node ≥ 22.18 原生支持类型剥离，可以从 .mjs 直接 import .ts，所以这份副本可以删掉。
+let CATEGORIES;
+try {
+  ({ CATEGORIES } = await import('../src/types.ts'));
+} catch (e) {
+  console.error('无法从 src/types.ts 读取门类表。');
+  console.error('这需要 Node ≥ 22.18（原生类型剥离）。当前版本：' + process.version);
+  console.error(e.message);
+  process.exit(1);
+}
+
 const HORIZONS = ['1y', '3y', '10y'];
 const DIRECTIONS = ['rising', 'falling', 'stable', 'volatile'];
 const CONFIDENCES = ['illustrative', 'reported', 'verified'];
@@ -43,6 +59,24 @@ const isFiniteNumber = (v) => typeof v === 'number' && Number.isFinite(v);
 
 // --------------------------------------------------------------------- 校验
 
+/**
+ * 地名册现在是 `{ 规范中文名: { lat, lon, aliases[] } }`。
+ * 建一张「任意名字 → 条目」的反查表，这样候选数据里写英文名（Kyiv）也能补出坐标，
+ * 并且会被**规范化成中文名**——球面上的地点标签统一是中文。
+ */
+function buildPlaceResolver(gazetteer) {
+  const map = new Map();
+  for (const [zh, v] of Object.entries(gazetteer)) {
+    if (zh.startsWith('_')) continue;
+    const entry = { name: zh, lat: v.lat, lon: v.lon };
+    map.set(zh, entry);
+    for (const alias of v.aliases ?? []) {
+      if (!map.has(alias)) map.set(alias, entry);
+    }
+  }
+  return map;
+}
+
 function checkPlaces(places, where, issues, { gazetteer, fill }) {
   if (!Array.isArray(places) || places.length === 0) {
     issues.push({ level: 'error', where, message: '至少需要一个地点' });
@@ -52,10 +86,12 @@ function checkPlaces(places, where, issues, { gazetteer, fill }) {
   for (const raw of places) {
     const place = { ...raw };
     if (place.name && (!isFiniteNumber(place.lat) || !isFiniteNumber(place.lon))) {
-      const hit = gazetteer[place.name];
+      const hit = gazetteer.get(place.name);
       if (hit) {
         place.lat = hit.lat;
         place.lon = hit.lon;
+        // 别名命中时改写成规范中文名，球面标签才统一
+        if (place.name !== hit.name) place.name = hit.name;
         if (fill) {
           issues.push({ level: 'warn', where, message: `坐标由地名册补全：${place.name}` });
         }
@@ -187,7 +223,7 @@ function report() {
   const events = readJson(PATHS.events);
   const trends = readJson(PATHS.trends);
   const meta = readJson(PATHS.meta);
-  const gazetteer = existsSync(PATHS.gazetteer) ? readJson(PATHS.gazetteer) : {};
+  const gazetteer = buildPlaceResolver(existsSync(PATHS.gazetteer) ? readJson(PATHS.gazetteer) : {});
   const actorIds = new Set(actors.map((a) => a.id));
 
   const ev = validateEvents(events, actorIds, gazetteer);
@@ -211,7 +247,7 @@ function report() {
   console.log(`近事 ${events.length} 条   ${Object.entries(byCat).map(([k, v]) => `${k}:${v}`).join('  ')}`);
   console.log(`大势 ${trends.length} 条   ${Object.entries(byHorizon).map(([k, v]) => `${k}:${v}`).join('  ')}`);
   console.log(`行为体 ${actors.length} 个（未使用 ${idle.length} 个${idle.length ? '：' + idle.join(',') : ''}）`);
-  console.log(`地名册 ${Object.keys(gazetteer).length} 条`);
+  console.log(`地名册 ${gazetteer.size} 个名字（含别名）`);
   if (dates.length) {
     console.log(`时间跨度 ${new Date(dates[0]).toISOString().slice(0, 10)} → ${new Date(dates.at(-1)).toISOString().slice(0, 10)}`);
   }
@@ -241,7 +277,7 @@ function promote(file, kind) {
   }
   const actors = readJson(PATHS.actors);
   const actorIds = new Set(actors.map((a) => a.id));
-  const gazetteer = existsSync(PATHS.gazetteer) ? readJson(PATHS.gazetteer) : {};
+  const gazetteer = buildPlaceResolver(existsSync(PATHS.gazetteer) ? readJson(PATHS.gazetteer) : {});
   const candidate = readJson(file);
 
   const { issues, out } =
@@ -285,7 +321,7 @@ function check(file, kind) {
   }
   const actors = readJson(PATHS.actors);
   const actorIds = new Set(actors.map((a) => a.id));
-  const gazetteer = existsSync(PATHS.gazetteer) ? readJson(PATHS.gazetteer) : {};
+  const gazetteer = buildPlaceResolver(existsSync(PATHS.gazetteer) ? readJson(PATHS.gazetteer) : {});
   const candidate = readJson(file);
 
   const { issues } =
@@ -294,8 +330,15 @@ function check(file, kind) {
       : validateEvents(candidate, actorIds, gazetteer, { fill: true });
 
   const errors = issues.filter((i) => i.level === 'error');
+  const warns = issues.filter((i) => i.level === 'warn');
   for (const i of issues) console.log(`${i.level === 'error' ? '✗' : '!'} [${i.where}] ${i.message}`);
-  if (issues.length === 0) console.log('校验通过。');
+  if (errors.length > 0) {
+    console.log(`\n✗ ${errors.length} 个错误，${warns.length} 个告警 —— 不能入库。`);
+  } else if (warns.length > 0) {
+    console.log(`\n✓ 无错误，${warns.length} 个告警 —— 可以入库，但请先看过告警。`);
+  } else {
+    console.log('✓ 校验通过，无告警。');
+  }
   return errors.length > 0 ? 1 : 0;
 }
 

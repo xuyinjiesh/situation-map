@@ -124,7 +124,12 @@ export function ControlRail({
                   </li>
                 );
               })}
-              {eventList.length === 0 && <li className="feed__empty">游标之前没有事件</li>}
+              {eventList.length === 0 && (
+                <li className="feed__empty">
+                  当前筛选与游标下没有近事
+                  <span className="feed__hint">（可能是门类被关掉了，或游标还没走到）</span>
+                </li>
+              )}
             </ol>
           </>
         )}
